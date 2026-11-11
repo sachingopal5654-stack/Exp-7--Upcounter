@@ -19,9 +19,9 @@ else if (en) count <= count + 1;   // increments, wraps 1111 -> 0000
 else count <= count;                // holds present value
 
 ## Design / RTL Program
-
+```
 // gedit up_counter.v
- ```
+ 
 module up_counter (
     input  wire       clk,    // clock
     input  wire       rst,    // asynchronous active-high reset
@@ -41,12 +41,12 @@ endmodule
 ```
 ## Testbench Program
 
-// gedit tb7.v
+    // gedit tb7.v
 
 
 
  
-module tb7;
+    module tb7;
 
     reg  clk, rst, en;
     wire [3:0] count;
@@ -159,8 +159,9 @@ count(next) = count + 1   (when en = 1), wrapping from 1111 to 0000
 The design was compiled and simulated using Synopsys VCS, and the functionality was verified using DVE waveform analysis, matching the expected state transition table.
 
 ## Output
+<img width="1916" height="1077" alt="experiment-7" src="https://github.com/user-attachments/assets/3967dc39-5153-4293-aa1b-4642f39e0b96" />
 
-<img width="609" height="173" alt="image" src="https://github.com/user-attachments/assets/34051c7c-087f-4759-a55f-1af528460ca0" />
+
 
 ## Viva-Voce Questions
 
